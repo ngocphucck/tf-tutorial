@@ -60,3 +60,27 @@ z = tf.reshape(x, (2, 1, 2, 1))
 ```python
 z = tf.transpose(x)
 ```
+
+## Neural network
+We can build model by using some method: sequential api or functional api. I summarize the general architecture, more detail 
+you can find in [keras documents](https://keras.io/about/).
+
+```python
+# Build a custom dataset
+datasets = ___
+
+# Create a new model
+model = keras.Sequential(___)
+# Setup some parameters like loss_fn, optimizer, metrics 
+model.compile(loss=___, optimizer=___, metrics=___)
+
+# Train
+model.fit(___, ___, batch_size=___, epochs=___, verbose=___)
+
+# Evaluation
+model.evaluate()
+
+# Prediction
+model.predict()
+```
+
