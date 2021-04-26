@@ -84,3 +84,8 @@ model.evaluate()
 model.predict()
 ```
 
+## Convolution neural network
+Tensorflow provides us a convolution function which is same as Pytorch.
+```python
+tf.keras.layers.Conv2D()
+```
