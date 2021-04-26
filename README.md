@@ -89,3 +89,23 @@ Tensorflow provides us a convolution function which is same as Pytorch.
 ```python
 tf.keras.layers.Conv2D()
 ```
+
+## Regularization
+We can use regularization techniques that can prevent our model from overfitting. The [Dropout](https://keras.io/api/layers/regularization_layers/dropout/) 
+or [weight regulizers](https://keras.io/api/layers/regularizers/) are the most popular and you can click on this to read more the manner to use. **Tensorflow** 
+also supports us to custom our regularization function:
+
+```python
+class CustomRegularization(keras.regularizers.Regularizer):
+    def __init__(self, args):
+        super(CustomRegularization, self).__init__()
+        self.___ = ___
+
+    def __call__(self, x):
+
+        return ___
+
+    def get_config(self):
+
+        return ___
+```
