@@ -109,3 +109,19 @@ class CustomRegularization(keras.regularizers.Regularizer):
 
         return ___
 ```
+
+## RNN, GRU, LSTM
+Tensorflow supports some method to build a recurrent model:
+```python
+layers.SimpleRNN()
+
+layers.GRU()
+
+layers.LSTM()
+```
+
+If you want to apply bidirectional method, you need to add the past layer 
+in the following function:
+```python
+layers.Bidirectional(layers.___)
+```
