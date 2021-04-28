@@ -125,3 +125,17 @@ in the following function:
 ```python
 layers.Bidirectional(layers.___)
 ```
+
+## Model subclassing
+We can use subclassing style to struct your custom model clearly.
+```python
+class ResNet(keras.Model):
+    def __init__(self):
+        ___
+    
+    def __call__(self):
+        ___
+
+    def model(self):
+        ___
+```
