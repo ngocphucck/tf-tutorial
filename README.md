@@ -139,3 +139,36 @@ class ResNet(keras.Model):
     def model(self):
         ___
 ```
+
+### Custom layer
+We can customize our own layer or model by the following architecture:
+
+```python
+class Conv2D(keras.layers.Layer):
+    def __init__(self, units):
+        self.units = units
+    
+    def build(self, input_shape):
+        self.w = self.add_weight(
+            shape=(input_shape[-1], self.units),
+            initializer='random_normal',
+            trainable=True
+        )
+
+        self.b = self.add_weight(
+            shape=(self.units, ),
+            initializer='random_normal',
+            trainable=True
+        )
+
+    def __call__(self, input_tensor):
+        
+        return tf.matmul(input_tensor, self.w) + self.b
+```
+
+The attractive thing is we don't need to specify a input shape when initialize a model. Instead of this, 
+keras provide **build** function which is called automatically by **__call__** function so specify a shape 
+in this time is enough :smile:.
+
+### Save and load pretrained model
+You can read in this [document](https://keras.io/guides/serialization_and_saving/), it's very comprehensive.
