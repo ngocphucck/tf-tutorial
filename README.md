@@ -172,3 +172,7 @@ in this time is enough :smile:.
 
 ### Save and load pretrained model
 You can read in this [document](https://keras.io/guides/serialization_and_saving/), it's very comprehensive.
+
+### Create a dataset with tfds
+Tensorflow provides a interesting API named [tensorflow_datasets](https://www.tensorflow.org/datasets/api_docs/python/tfds)
+and you can find a simple code which I made to process text data in *_dataset.py_*.
